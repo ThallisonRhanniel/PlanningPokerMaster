@@ -6,6 +6,7 @@ import { HeaderButton } from '../components/HeaderButton';
 import { TabBarIcon } from '../components/TabBarIcon';
 import One from '../screens/one';
 import Two from '../screens/two';
+import StorePointScreen from 'screens/StoryPoint/storePoint.view';
 
 const Tab = createBottomTabNavigator();
 
@@ -31,6 +32,14 @@ export default function TabLayout({ navigation }: Props) {
         component={Two}
         options={{
           title: 'Tab Two',
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        }}
+      />
+      <Tab.Screen
+        name="Tree"
+        component={StorePointScreen}
+        options={{
+          title: 'Tab trhee',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
